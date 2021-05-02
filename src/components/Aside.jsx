@@ -1,9 +1,12 @@
+import { Typography } from "@material-ui/core";
 import React from "react";
-import { loadCategories } from "../features/categoriesSlice";
 
 const Aside = () => {
-  const categories = loadCategories();
-  return <div>{categories}</div>;
+  return (
+    <div>
+      <Typography>Aside</Typography>
+    </div>
+  );
 };
 
 export default Aside;
