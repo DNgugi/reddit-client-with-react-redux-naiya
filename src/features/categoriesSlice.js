@@ -10,23 +10,23 @@ export const loadCategories = createAsyncThunk(
   }
 );
 
-export const categoriesSlice = createSlice({
-  name: "categories",
-  initialState: {
-    categories: [],
-    isLoadingCategories: false,
-    failedToLoadCategories: false,
-  },
-  extraReducers: {
-    ["loadCategories.pending"]: (state, action) => {
-      state.isLoadingCategories = true;
-      state.failedToLoadCategories = false;
-    },
-    ["loadCategories.fulfilled"]: (state, action) => {},
+// export const categoriesSlice = createSlice({
+//   name: "categories",
+//   initialState: {
+//     categories: [],
+//     isLoadingCategories: false,
+//     failedToLoadCategories: false,
+//   },
+//   extraReducers: {
+//     ["loadCategories.pending"]: (state, action) => {
+//       state.isLoadingCategories = true;
+//       state.failedToLoadCategories = false;
+//     },
+//     ["loadCategories.fulfilled"]: (state, action) => {},
 
-    ["loadCategories.rejected"]: (state, action) => {
-      state.isLoadingCategories = false;
-      state.failedToLoadCategories = true;
-    },
-  },
-});
+//     ["loadCategories.rejected"]: (state, action) => {
+//       state.isLoadingCategories = false;
+//       state.failedToLoadCategories = true;
+//     },
+//   },
+// });

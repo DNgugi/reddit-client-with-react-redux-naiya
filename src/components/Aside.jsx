@@ -1,7 +1,9 @@
 import React from "react";
+import { loadCategories } from "../features/categoriesSlice";
 
 const Aside = () => {
-  return <div></div>;
+  const categories = loadCategories();
+  return <div>{categories}</div>;
 };
 
 export default Aside;
