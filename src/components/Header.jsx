@@ -19,9 +19,9 @@ const useStyles = makeStyles((theme) => ({
   },
   search: {
     position: "relative",
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: fade(theme.palette.common.white, 0.5),
     "&:hover": {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: fade(theme.palette.common.white, 0.15),
     },
     marginLeft: 10,
     width: "100%",
@@ -57,26 +57,35 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// const handleChange = (e) => {
+//   e.preventDefault();
+//   console.log(e.target.value);
+// };
+
 const Header = () => {
   const classes = useStyles();
   return (
     <header>
-      <AppBar position="fixed" color="primary">
+      <AppBar position="fixed" color="secondary">
         <Toolbar>
           <div>
-            <Typography variant="h5">Reddit</Typography>
+            <Typography variant="h5">Reddit Client</Typography>
           </div>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
+              inputComponent="input"
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ "aria-label": "search" }}
+              onChange={(event) => {
+                console.log(event.target.value);
+              }}
             />
           </div>
         </Toolbar>

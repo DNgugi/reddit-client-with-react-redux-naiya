@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import { Container, Grid, makeStyles, useTheme } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import Aside from "./components/Aside";
@@ -20,10 +20,10 @@ function App() {
     <>
       <Header />
       <Grid container className={classes.wrapper}>
-        <Grid item xs="12" sm="12" md="8">
+        <Grid item xs={12} sm={12} md={8}>
           <MainContent />
         </Grid>
-        <Grid item xs="12" sm="12" md="4">
+        <Grid item xs={12} sm={12} md={4}>
           <Aside />
         </Grid>
       </Grid>

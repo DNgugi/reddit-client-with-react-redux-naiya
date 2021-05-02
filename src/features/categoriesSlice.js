@@ -1,32 +1,35 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-export const loadCategories = createAsyncThunk(
-  "categories/loadCategories",
-  async () => {
-    const response = await fetch("https://www.reddit.com/subreddits.json");
-    // const json = await response.json();
-    // console.log(json);
-    return response;
-  }
-);
+// export const loadCategories = createAsyncThunk(
+//   "categories/loadCategories",
+//   async () => {
+//     const response = await fetch("https://www.reddit.com/subreddits.json");
+//     // const json = await response.json();
+//     // console.log(json);
+//     return response;
+//   }
+// );
 
-// export const categoriesSlice = createSlice({
-//   name: "categories",
-//   initialState: {
-//     categories: [],
-//     isLoadingCategories: false,
-//     failedToLoadCategories: false,
-//   },
-//   extraReducers: {
-//     ["loadCategories.pending"]: (state, action) => {
-//       state.isLoadingCategories = true;
-//       state.failedToLoadCategories = false;
-//     },
-//     ["loadCategories.fulfilled"]: (state, action) => {},
+export const categoriesSlice = createSlice({
+  name: "categories",
+  initialState: {
+    categories: [],
+    isLoadingCategories: false,
+    failedToLoadCategories: false,
+  },
+  extraReducers: {
+    ["loadCategories.pending"]: (state, action) => {
+      state.isLoadingCategories = true;
+      state.failedToLoadCategories = false;
+    },
+    ["loadCategories.fulfilled"]: (state, action) => {
+      state.isLoadingCategories = false;
+      state.failedToLoadCategories = false;
+    },
 
-//     ["loadCategories.rejected"]: (state, action) => {
-//       state.isLoadingCategories = false;
-//       state.failedToLoadCategories = true;
-//     },
-//   },
-// });
+    ["loadCategories.rejected"]: (state, action) => {
+      state.isLoadingCategories = false;
+      state.failedToLoadCategories = true;
+    },
+  },
+});

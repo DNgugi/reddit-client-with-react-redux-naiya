@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Toolbar,
-  Typography,
-} from "@material-ui/core";
+import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
 import React from "react";
 
 const Post = (props) => {
