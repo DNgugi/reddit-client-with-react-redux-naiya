@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     marginTop: theme.spacing(10),
-    height: "100vh",
+    minHeight: "100vh",
     padding: theme.spacing(5),
   },
 }));

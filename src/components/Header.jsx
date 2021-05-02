@@ -15,22 +15,18 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "block",
-    },
+    display: "block",
   },
   search: {
     position: "relative",
-    borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
     "&:hover": {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
-    marginLeft: 0,
+    marginLeft: 10,
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(1),
+      marginLeft: theme.spacing(4),
       width: "auto",
     },
   },
@@ -65,7 +61,7 @@ const Header = () => {
   const classes = useStyles();
   return (
     <header>
-      <AppBar position="fixed">
+      <AppBar position="fixed" color="primary">
         <Toolbar>
           <div>
             <Typography variant="h5">Reddit</Typography>
