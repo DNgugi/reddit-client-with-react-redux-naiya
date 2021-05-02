@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const loadCategories = createAsyncThunk(
   "categories/loadCategories",
   async () => {
-    const response = await fetch("https://www.reddit.com/r/.json");
+    const response = await fetch("https://www.reddit.com/subreddits.json");
     const json = await response.json();
     console.log(json);
     //return json;
