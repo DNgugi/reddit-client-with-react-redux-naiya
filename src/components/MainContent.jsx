@@ -1,10 +1,11 @@
-import { Typography } from "@material-ui/core";
 import React from "react";
+import { Typography } from "@material-ui/core";
+import PostList from "./PostList";
 
 const MainContent = () => {
   return (
     <main>
-      <Typography>Main</Typography>
+      <PostList />
     </main>
   );
 };
